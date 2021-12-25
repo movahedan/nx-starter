@@ -15,8 +15,8 @@
     "baseUrl": ".",
     "paths": {
       "@root/ui": ["libs/ui/src/index.ts"],
-      "@root/website/pages/*": ["apps/website/pages/*"],
-      "@root/website/pages.styles/*": ["apps/website/pages.styles/*"]
+      "@root/website/pages.styles/*": ["apps/website/pages.styles/*"],
+      "@root/website/pages/*": ["apps/website/pages/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
