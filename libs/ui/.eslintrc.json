@@ -1,10 +1,10 @@
 {
-  "extends": ["plugin:@nrwl/nx/react", "../../.eslintrc.json"],
+  "extends": ["../../.eslintrc.json"],
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx"],
-      "rules": {}
+      "files": ["*.{js,jsx,ts,tsx}"],
+      "extends": ["plugin:@nrwl/nx/react", "../../.eslintrc.react.js"]
     }
   ]
 }

@@ -1,35 +1,31 @@
 {
   "root": true,
+  "extends": [".eslint/prettier.json", ".eslint/nx.linter.json"],
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx"],
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.js"],
+      "files": ["**/*.{ts,tsx}"],
+      "extends": [".eslint/typescript.json"]
+    },
+    {
+      "files": ["*.{js,jsx,ts,tsx}"],
+      "extends": [".eslint/import.js"], 
       "rules": {
-        "@nrwl/nx/enforce-module-boundaries": [
+        "newline-before-return": "error",
+        "max-lines": [
           "error",
-          {
-            "enforceBuildableLibDependency": true,
-            "allow": [],
-            "depConstraints": [
-              {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
-              }
-            ]
-          }
+          { "max": 1000, "skipBlankLines": true, "skipComments": true }
         ]
       }
     },
     {
-      "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
-    },
-    {
-      "files": ["*.js"],
-      "extends": ["plugin:@nrwl/nx/javascript"],
-      "rules": {}
-    }
+			"files": ["**/*.{test,spec}.{ts,tsx}"],
+			"rules": {
+				"max-lines": [
+					"error",
+					{ "max": 3000, "skipBlankLines": true, "skipComments": true }
+				]
+			}
+		}
   ]
 }

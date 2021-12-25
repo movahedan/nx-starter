@@ -14,7 +14,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@root/ui": ["libs/ui/src/index.ts"]
+      "@root/ui": ["libs/ui/src/index.ts"],
+      "@root/website/pages/*": ["apps/website/pages/*"],
+      "@root/website/pages.styles/*": ["apps/website/pages.styles/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

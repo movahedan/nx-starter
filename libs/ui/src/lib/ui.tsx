@@ -14,5 +14,3 @@ export function Ui(props: UiProps) {
     </StyledUi>
   );
 }
-
-export default Ui;
