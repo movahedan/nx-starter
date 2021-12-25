@@ -1,8 +1,29 @@
 {
   "version": 2,
   "projects": {
-    "ui": "libs/ui",
-    "website": "apps/website",
-    "website-e2e": "apps/website-e2e"
+    "ui": {
+      "root": "libs/ui",
+      "targets": {
+        "type-check": {
+          "executor": "./tools/executors/type-check:type-check"
+        }
+      }
+    },
+    "website": {
+      "root": "apps/website",
+      "targets": {
+        "type-check": {
+          "executor": "./tools/executors/type-check:type-check"
+        }
+      }
+    },
+    "website-e2e": {
+      "root": "apps/website-e2e",
+      "targets": {
+        "type-check": {
+          "executor": "./tools/executors/type-check:type-check"
+        }
+      }
+    }
   }
 }

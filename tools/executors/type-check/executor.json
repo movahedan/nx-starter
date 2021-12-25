@@ -1,0 +1,9 @@
+{
+  "executors": {
+    "type-check": {
+      "implementation": "./type-check.js",
+      "schema": "./schema.json",
+      "description": "Runs `type-check`."
+    }
+  }
+}
