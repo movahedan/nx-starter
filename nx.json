@@ -1,5 +1,5 @@
 {
-  "npmScope": "aviro",
+  "npmScope": "root",
   "affected": {
     "defaultBase": "main"
   },
