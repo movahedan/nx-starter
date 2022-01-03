@@ -14,6 +14,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@root/fetcher": ["libs/fetcher/src/index.ts"],
       "@root/ui": ["libs/ui/src/index.ts"],
       "@root/website/pages.styles/*": ["apps/website/pages.styles/*"],
       "@root/website/pages/*": ["apps/website/pages/*"]
