@@ -1,14 +1,10 @@
-const importConfig = require("./import.order.config")
+const importConfig = require('./.es.import.order.js');
 
 module.exports = {
   plugins: ['import'],
   settings: {
     'import/internal-regex': '^(?:@root/)',
-    'import/resolver': {
-      node: {
-        paths: ['.'],
-      },
-    },
+    'import/resolver': { node: { paths: ['.'] } },
   },
   extends: [
     'plugin:import/recommended',
@@ -16,14 +12,9 @@ module.exports = {
     'plugin:import/warnings',
   ],
   rules: {
-    'import/order': ['error', importConfig],
-    'import/named': 'warn',
-    'import/export': 'warn',
+    'import/first': 'error',
     'import/no-cycle': 'error',
-    'import/extensions': 'off',
     'import/namespace': 'error',
-    'import/group-exports': 'off',
-    'import/no-deprecated': 'warn',
     'import/no-duplicates': 'error',
     'import/no-unresolved': 'error',
     'import/no-self-import': 'error',
@@ -32,10 +23,11 @@ module.exports = {
     'import/no-mutable-exports': 'error',
     'import/no-named-as-default': 'error',
     'import/newline-after-import': 'error',
+    'import/newline-after-import': 'error',
     'import/no-useless-path-segments': 'error',
-    'import/no-relative-parent-imports': 'off',
-    'no-restricted-imports': "off", // nx module boundaries will handle it
+    'import/order': ['error', importConfig],
     'import/no-unassigned-import': ['error', { allow: ['**/*.css'] }],
+    'import/max-dependencies': ['error', { max: 10, ignoreTypeImports: true }],
     'import/no-anonymous-default-export': [
       'error',
       {
@@ -48,6 +40,12 @@ module.exports = {
         allowObject: false,
       },
     ],
+    'import/named': 'warn',
+    'import/export': 'warn',
+    'import/extensions': 'off',
+    'import/group-exports': 'off',
+    'import/no-relative-parent-imports': 'off',
+    'no-restricted-imports': 'off', // nx module boundaries will handle it
   },
   overrides: [
     {
@@ -69,7 +67,6 @@ module.exports = {
       files: ['./**/*.d.ts'],
       rules: {
         'import/no-unassigned-import': 'off',
-        'import/no-default-export': 'off',
       },
     },
   ],

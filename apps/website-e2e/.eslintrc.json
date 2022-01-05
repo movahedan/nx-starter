@@ -3,10 +3,16 @@
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
-      "files": ["src/plugins/index.js"],
+      "files": ["src/plugins/index.ts"],
       "rules": {
         "@typescript-eslint/no-var-requires": "off",
         "no-undef": "off"
+      }
+    },
+    {
+      "files": ["src/support/index.ts"],
+      "rules": {
+        "import/no-unassigned-import": "off"
       }
     }
   ]

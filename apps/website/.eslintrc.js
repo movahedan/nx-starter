@@ -1,26 +1,16 @@
-const importConfig = require('../../.eslint/import.order.config');
+const importConfig = require('../../.es.import.order.js');
 
 module.exports = {
-  extends: ['../../.eslintrc.json'],
+  extends: [
+    '../../.eslintrc.json',
+    'next',
+    'next/core-web-vitals',
+    '../../.es.react.eslintrc.js',
+  ],
   ignorePatterns: ['!**/*'],
-  env: {
-    jest: true,
-  },
   overrides: [
     {
-      files: ['./pages/**/*.{ts,tsx}'],
-      rules: {
-        'import/no-default-export': 'off',
-      },
-    },
-    {
       files: ['*.{ts,tsx,js,jsx}'],
-      extends: [
-        'next',
-        'next/core-web-vitals',
-        '../../.eslint/react.js',
-        'plugin:@nrwl/nx/react-typescript',
-      ],
       rules: {
         'jsx-a11y/anchor-is-valid': 'off',
         '@next/next/no-html-link-for-pages': ['error', 'apps/website/pages'],
@@ -38,6 +28,12 @@ module.exports = {
             ],
           },
         ],
+      },
+    },
+    {
+      files: ['./pages/**/*.{js,jsx,ts,tsx}'],
+      rules: {
+        'import/no-default-export': 'off',
       },
     },
   ],
