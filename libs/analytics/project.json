@@ -1,0 +1,25 @@
+{
+  "root": "libs/analytics",
+  "sourceRoot": "libs/analytics",
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/analytics"],
+      "options": {
+        "jestConfig": "libs/analytics/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/analytics/**/*.{js,ts,tsx}"]
+      }
+    },
+    "type-check": {
+      "executor": "./tools/executors/type-check:type-check"
+    }
+  }
+}

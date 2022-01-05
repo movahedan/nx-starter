@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "analytics": "libs/analytics",
     "fetcher": "libs/fetcher",
     "ui": "libs/ui",
     "website": "apps/website",
