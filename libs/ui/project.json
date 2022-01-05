@@ -18,6 +18,9 @@
         "jestConfig": "libs/ui/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "type-check": {
+      "executor": "./tools/executors/type-check:type-check"
     }
   }
 }

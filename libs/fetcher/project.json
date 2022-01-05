@@ -1,0 +1,25 @@
+{
+  "root": "libs/fetcher",
+  "sourceRoot": "libs/fetcher/src",
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/fetcher"],
+      "options": {
+        "jestConfig": "libs/fetcher/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/fetcher/**/*.ts"]
+      }
+    },
+    "type-check": {
+      "executor": "./tools/executors/type-check:type-check"
+    }
+  }
+}

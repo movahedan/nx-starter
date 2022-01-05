@@ -21,6 +21,9 @@
       "options": {
         "lintFilePatterns": ["apps/website-e2e/**/*.{js,ts}"]
       }
+    },
+    "type-check": {
+      "executor": "./tools/executors/type-check:type-check"
     }
   },
   "tags": [],

@@ -46,8 +46,11 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/website/**/*.{js,ts,tsx}"]
+        "lintFilePatterns": ["apps/website/**/*.{js,jsx,ts,tsx}"]
       }
+    },
+    "type-check": {
+      "executor": "./tools/executors/type-check:type-check"
     }
   },
   "tags": []
