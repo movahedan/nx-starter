@@ -9,7 +9,3 @@ beforeEach(() => {
 afterAll(() => {
   jestFetchMock.disableMocks();
 });
-
-it('Dummy', () => {
-  expect(true).toBe(true);
-});

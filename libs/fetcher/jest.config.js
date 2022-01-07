@@ -12,5 +12,5 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/libs/fetcher',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.test.ts'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };
