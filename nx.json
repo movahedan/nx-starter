@@ -13,6 +13,14 @@
     },
     ".eslintrc.json": "*"
   },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["type-check", "lint", "test", "build"]
+      }
+    }
+  },
   "targetDependencies": {
     "build": [
       {

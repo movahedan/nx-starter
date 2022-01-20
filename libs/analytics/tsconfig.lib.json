@@ -1,13 +1,13 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
-    "types": ["node"]
-  },
+  "include": ["index.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["**/*.test.ts", "**/*.test.tsx"],
   "files": [
     "../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
     "../../node_modules/@nrwl/react/typings/image.d.ts"
   ],
-  "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/*.test.js", "**/*.test.jsx"],
-  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "types": ["node"]
+  }
 }

@@ -60,7 +60,6 @@
     "jest": "27.2.3",
     "jest-fetch-mock": "^3.0.3",
     "lint-staged": "^12.1.4",
-    "micromatch": "^4.0.4",
     "nx": "^13.3.9",
     "path": "^0.12.7",
     "prettier": "^2.3.1",

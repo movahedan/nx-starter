@@ -21,6 +21,27 @@
     },
     "type-check": {
       "executor": "./tools/executors/type-check:type-check"
+    },
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ui",
+        "tsConfig": "libs/ui/tsconfig.lib.json",
+        "project": "libs/ui/package.json",
+        "entryFile": "libs/ui/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "format": ["esm"],
+        "assets": [
+          {
+            "glob": "libs/ui/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
     }
   }
 }

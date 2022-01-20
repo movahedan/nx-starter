@@ -1,13 +1,9 @@
 {
   "extends": "./tsconfig.json",
+  "include": ["**/*.test.ts", "**/*.test.tsx", "**/*.d.ts"],
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
+    "allowJs": true,
     "module": "commonjs",
     "types": ["jest", "node"]
-  },
-  "include": [
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.d.ts"
-  ]
+  }
 }

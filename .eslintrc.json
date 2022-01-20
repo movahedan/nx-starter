@@ -1,7 +1,7 @@
 {
   "root": true,
   "plugins": ["@nrwl/nx"],
-  "extends": ["plugin:prettier/recommended", ".es.import.eslintrc.js"],
+  "extends": ["plugin:prettier/recommended", ".es.import.eslintrc.json"],
   "ignorePatterns": ["**/*"],
   "rules": {
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }]

@@ -1,26 +1,12 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
     "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react",
-    "allowJs": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "jsxImportSource": "@emotion/react"
   },
-  "files": [],
-  "include": [],
   "references": [
-    {
-      "path": "./tsconfig.lib.json"
-    },
-    {
-      "path": "./tsconfig.test.json"
-    }
+    { "path": "./tsconfig.lib.json" },
+    { "path": "./tsconfig.test.json" }
   ]
 }

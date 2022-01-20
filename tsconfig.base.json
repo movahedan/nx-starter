@@ -1,25 +1,31 @@
 {
   "compileOnSave": false,
+  "files": [],
+  "include": [],
+  "exclude": ["node_modules", "tmp"],
   "compilerOptions": {
-    "rootDir": ".",
     "strict": true,
     "sourceMap": true,
     "declaration": false,
-    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "skipDefaultLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noPropertyAccessFromIndexSignature": true,
     "importHelpers": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2021", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
+    "lib": ["es2021"],
+    "rootDir": ".",
     "baseUrl": ".",
     "paths": {
       "@root/analytics": ["libs/analytics/src/index.ts"],
       "@root/fetcher": ["libs/fetcher/src/index.ts"],
-      "@root/ui": ["libs/ui/src/index.ts"],
-      "@root/website/pages.styles/*": ["apps/website/pages.styles/*"],
-      "@root/website/pages/*": ["apps/website/pages/*"]
+      "@root/ui": ["libs/ui/src/index.ts"]
     }
-  },
-  "exclude": ["node_modules", "tmp"]
+  }
 }

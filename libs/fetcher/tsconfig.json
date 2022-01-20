@@ -1,9 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
-  "files": [],
-  "include": [],
   "compilerOptions": {
-    "allowJs": true
+    "lib": ["es2021", "dom"]
   },
   "references": [
     {
