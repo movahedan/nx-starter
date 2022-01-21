@@ -95,9 +95,15 @@
       }
     },
     {
-      "files": ["./**/*.d.ts"],
+      "files": ["*.d.ts"],
       "rules": {
         "import/no-unassigned-import": "off"
+      }
+    },
+    {
+      "files": ["jest.config.ts"],
+      "rules": {
+        "import/no-default-export": "off"
       }
     }
   ]

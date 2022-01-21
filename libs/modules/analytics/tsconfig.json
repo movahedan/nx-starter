@@ -1,11 +1,14 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../../tsconfig.base.json",
   "compilerOptions": {
     "lib": ["es2021", "dom"],
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    }
   },
-  "files": [],
-  "include": [],
   "references": [
     { "path": "./tsconfig.lib.json" },
     { "path": "./tsconfig.test.json" }

@@ -3,7 +3,7 @@
     "../../.eslintrc.json",
     "next",
     "next/core-web-vitals",
-    "../../.es.react.eslintrc.js"
+    "../../.es.react.eslintrc.json"
   ],
   "ignorePatterns": ["!**/*"],
   "overrides": [

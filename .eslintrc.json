@@ -3,10 +3,14 @@
   "plugins": ["@nrwl/nx"],
   "extends": ["plugin:prettier/recommended", ".es.import.eslintrc.json"],
   "ignorePatterns": ["**/*"],
-  "rules": {
-    "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
-  },
   "overrides": [
+    {
+      "files": ["*.{html,css,scss,json,svg,js,jsx,ts,tsx}"],
+      "rules": {
+        "prettier/prettier": ["error", { "singleQuote": true,
+          "jsxSingleQuote": true }]
+      }
+    },
     {
       "files": ["*.test.{js,jsx,ts,tsx}", "jest.setup.{js,ts}"],
       "env": { "jest": true }

@@ -1,10 +1,10 @@
 {
   "version": 2,
   "projects": {
-    "analytics": "libs/analytics",
-    "fetcher": "libs/fetcher",
-    "ui": "libs/ui",
     "website": "apps/website",
-    "website-e2e": "apps/website-e2e"
+    "website-e2e": "apps/website-e2e",
+    "ui": "libs/ui",
+    "fetcher": "libs/modules/fetcher",
+    "analytics": "libs/modules/analytics"
   }
 }

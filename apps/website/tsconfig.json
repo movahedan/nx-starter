@@ -1,13 +1,15 @@
 {
   "extends": "../../tsconfig.base.json",
-  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts"],
   "compilerOptions": {
-    "noEmit": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "outDir": "../../dist/out-tsc",
-    "types": ["node", "jest"],
     "jsx": "preserve",
-    "jsxImportSource": "@emotion/react"
-  }
+    "jsxImportSource": "@emotion/react",
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  },
+  "references": [
+    { "path": "./tsconfig.lib.json" },
+    { "path": "./tsconfig.test.json" },
+  ]
 }

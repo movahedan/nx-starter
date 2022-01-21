@@ -1,9 +1,7 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["**/*.test.ts", "**/*.test.tsx", "**/*.d.ts"],
+  "include": ["**/*.d.ts", "**/*.test.ts", "**/*.test.tsx"],
   "compilerOptions": {
-    "allowJs": true,
-    "module": "commonjs",
     "types": ["jest", "node"]
   }
 }

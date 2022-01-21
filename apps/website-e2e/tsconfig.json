@@ -3,8 +3,6 @@
   "include": ["src/**/*.ts"],
   "compilerOptions": {
     "sourceMap": false,
-    "allowJs": true,
-    "outDir": "../../dist/out-tsc",
     "types": ["cypress", "node"]
   }
 }
