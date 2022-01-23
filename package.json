@@ -1,14 +1,18 @@
 {
   "license": "MIT",
-  "private": false,
   "name": "nx-next-boilerplate",
   "version": "0.0.1",
   "author": "soheil.movahhedan@gmail.com",
+  "private": true,
+  "workspaces": {
+    "packages": ["apps/*", "libs/*"]
+  },
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "pre-commit": "lint-staged -r"
+    "pre-commit": "lint-staged -r",
+    "uninstall": "rm -rf ./apps/*/node_modules && rm -rf ./libs/*/node_modules && rm -rf ./node_modules"
   },
   "dependencies": {
     "@emotion/react": "11.5.0",
@@ -25,7 +29,6 @@
   "devDependencies": {
     "@emotion/babel-plugin": "11.3.0",
     "@nrwl/cli": "13.3.9",
-    "@nrwl/cypress": "13.3.9",
     "@nrwl/eslint-plugin-nx": "13.3.9",
     "@nrwl/jest": "13.3.9",
     "@nrwl/linter": "13.3.9",
@@ -45,11 +48,9 @@
     "@typescript-eslint/eslint-plugin": "~5.3.0",
     "@typescript-eslint/parser": "~5.3.0",
     "babel-jest": "27.2.3",
-    "cypress": "^9.1.0",
     "eslint": "8.2.0",
     "eslint-config-next": "12.0.7",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
@@ -66,5 +67,5 @@
     "react-test-renderer": "17.0.2",
     "ts-jest": "27.0.5",
     "typescript": "~4.4.3"
-  }
+  }  
 }

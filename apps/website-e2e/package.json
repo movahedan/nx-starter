@@ -1,0 +1,11 @@
+{
+  "name": "website-e2e",
+  "version": "1.0.0",
+  "dependencies": {
+    "cypress": "^9.1.0"
+  },
+  "devDependencies": {
+    "@nrwl/cypress": "13.3.9",
+    "eslint-plugin-cypress": "^2.10.3"
+  }
+}
