@@ -1,8 +1,18 @@
 {
   "root": "libs/modules/analytics",
-  "sourceRoot": "libs/modules/analytics",
+  "sourceRoot": "libs/modules/analytics/src",
   "projectType": "library",
   "targets": {
+    "type-check": {
+      "executor": "./tools/executors/type-check:type-check"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/modules/analytics/**/*.ts"]
+      }
+    },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/modules/analytics"],
@@ -11,15 +21,26 @@
         "passWithNoTests": true
       }
     },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
       "options": {
-        "lintFilePatterns": ["libs/modules/analytics/**/*.{ts,tsx}"]
+        "outputPath": "dist/libs/modules/analytics",
+        "tsConfig": "libs/modules/analytics/tsconfig.lib.json",
+        "project": "libs/modules/analytics/package.json",
+        "entryFile": "libs/modules/analytics/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "format": ["esm"],
+        "assets": [
+          {
+            "glob": "libs/modules/analytics/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
       }
-    },
-    "type-check": {
-      "executor": "./tools/executors/type-check:type-check"
     }
   }
 }

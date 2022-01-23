@@ -3,6 +3,16 @@
   "sourceRoot": "apps/website-e2e/src",
   "projectType": "application",
   "targets": {
+    "type-check": {
+      "executor": "./tools/executors/type-check:type-check"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/website-e2e/**/*.{js,ts}"]
+      }
+    },
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
@@ -14,16 +24,6 @@
           "devServerTarget": "website:serve:production"
         }
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/website-e2e/**/*.{js,ts}"]
-      }
-    },
-    "type-check": {
-      "executor": "./tools/executors/type-check:type-check"
     }
   },
   "tags": [],

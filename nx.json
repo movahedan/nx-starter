@@ -1,5 +1,6 @@
 {
   "npmScope": "root",
+  "defaultProject": "website",
   "affected": {
     "defaultBase": "main"
   },
@@ -7,11 +8,34 @@
     "defaultCollection": "@nrwl/next"
   },
   "implicitDependencies": {
+    "workspace.json": "*",
     "package.json": {
       "dependencies": "*",
       "devDependencies": "*"
     },
-    ".eslintrc.json": "*"
+    ".eslintrc.json": "*",
+    "tsconfig.base.json": "*",
+    "nx.json": "*"
+  },
+  "targetDependencies": {
+    "type-check": [
+      {
+        "target": "type-check",
+        "projects": "dependencies"
+      }
+    ],
+    "test": [
+      {
+        "target": "type-check",
+        "projects": "self"
+      }
+    ],
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
   },
   "tasksRunnerOptions": {
     "default": {
@@ -20,14 +44,6 @@
         "cacheableOperations": ["type-check", "lint", "test", "build"]
       }
     }
-  },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
   },
   "generators": {
     "@nrwl/react": {
@@ -41,6 +57,5 @@
         "linter": "eslint"
       }
     }
-  },
-  "defaultProject": "website"
+  }
 }

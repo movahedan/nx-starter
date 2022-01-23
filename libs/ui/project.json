@@ -4,6 +4,9 @@
   "projectType": "library",
   "tags": [],
   "targets": {
+    "type-check": {
+      "executor": "./tools/executors/type-check:type-check"
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
@@ -18,9 +21,6 @@
         "jestConfig": "libs/ui/jest.config.js",
         "passWithNoTests": true
       }
-    },
-    "type-check": {
-      "executor": "./tools/executors/type-check:type-check"
     },
     "build": {
       "executor": "@nrwl/web:rollup",

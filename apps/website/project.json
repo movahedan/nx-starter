@@ -3,6 +3,30 @@
   "sourceRoot": "apps/website",
   "projectType": "application",
   "targets": {
+    "type-check": {
+      "executor": "./tools/executors/type-check:type-check"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/website/**/*.{js,jsx,ts,tsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/website"],
+      "options": {
+        "jestConfig": "apps/website/jest.config.js",
+        "passWithNoTests": true
+      },
+      "dependsOn": [
+        {
+          "target": "type-check",
+          "projects": "self"
+        }
+      ]
+    },
     "build": {
       "executor": "@nrwl/next:build",
       "outputs": ["{options.outputPath}"],
@@ -33,24 +57,6 @@
       "options": {
         "buildTarget": "website:build:production"
       }
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/website"],
-      "options": {
-        "jestConfig": "apps/website/jest.config.js",
-        "passWithNoTests": true
-      }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/website/**/*.{js,jsx,ts,tsx}"]
-      }
-    },
-    "type-check": {
-      "executor": "./tools/executors/type-check:type-check"
     }
   },
   "tags": []
