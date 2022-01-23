@@ -8,7 +8,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged -r"
   },
   "dependencies": {
     "@emotion/react": "11.5.0",
