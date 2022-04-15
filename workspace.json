@@ -3,6 +3,7 @@
   "projects": {
     "analytics": "libs/modules/analytics",
     "fetcher": "libs/modules/fetcher",
+    "media-queries": "libs/modules/media-queries",
     "ui": "libs/ui",
     "website": "apps/website",
     "website-e2e": "apps/website-e2e"

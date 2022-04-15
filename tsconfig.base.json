@@ -15,6 +15,7 @@
     "paths": {
       "@root/modules-analytics": ["libs/modules/analytics/src/index.ts"],
       "@root/modules-fetcher": ["libs/modules/fetcher/src/index.ts"],
+      "@root/modules-media-queries": ["libs/modules/media-queries/src/index.ts"],
       "@root/ui": ["libs/ui/src/index.ts"]
     },
     "strict": true,
