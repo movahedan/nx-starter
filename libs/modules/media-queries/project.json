@@ -1,0 +1,46 @@
+{
+  "root": "libs/modules/media-queries",
+  "sourceRoot": "libs/modules/media-queries/src",
+  "projectType": "library",
+  "targets": {
+    "type-check": {
+      "executor": "./tools/executors/type-check:type-check"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/modules/media-queries/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/modules/media-queries"],
+      "options": {
+        "jestConfig": "libs/modules/media-queries/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/modules/media-queries",
+        "tsConfig": "libs/modules/media-queries/tsconfig.lib.json",
+        "project": "libs/modules/media-queries/package.json",
+        "entryFile": "libs/modules/media-queries/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "format": ["esm"],
+        "assets": [
+          {
+            "glob": "libs/modules/media-queries/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}
