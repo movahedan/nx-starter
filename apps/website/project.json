@@ -17,15 +17,8 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/website"],
       "options": {
-        "jestConfig": "apps/website/jest.config.js",
-        "passWithNoTests": true
-      },
-      "dependsOn": [
-        {
-          "target": "type-check",
-          "projects": "self"
-        }
-      ]
+        "jestConfig": "apps/website/jest.config.ts"
+      }
     },
     "build": {
       "executor": "@nrwl/next:build",
