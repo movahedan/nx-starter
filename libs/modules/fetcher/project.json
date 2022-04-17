@@ -8,17 +8,34 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/modules/fetcher/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/modules/fetcher"],
       "options": {
         "jestConfig": "libs/modules/fetcher/jest.config.ts",
         "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "options": {
+        "outputPath": "out/build/libs/modules/fetcher",
+        "tsConfig": "libs/modules/fetcher/tsconfig.lib.json",
+        "project": "libs/modules/fetcher/package.json",
+        "entryFile": "libs/modules/fetcher/src/index.ts",
+        "external": [],
+        "compiler": "babel",
+        "format": ["esm"],
+        "assets": [
+          {
+            "glob": "libs/modules/fetcher/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
       }
     }
   }

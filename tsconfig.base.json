@@ -9,14 +9,14 @@
     "target": "es2015",
     "lib": ["es2021"],
     "rootDir": ".",
-    "outDir": "./dist/out-tsc",
+    "outDir": "./out/tsc",
     "types": [],
     "baseUrl": ".",
     "paths": {
-      "@root/modules-analytics": ["libs/modules/analytics/src/index.ts"],
-      "@root/modules-fetcher": ["libs/modules/fetcher/src/index.ts"],
-      "@root/modules-media-queries": ["libs/modules/media-queries/src/index.ts"],
-      "@root/ui": ["libs/ui/src/index.ts"]
+      "@nx-starter/modules/analytics": ["libs/modules/analytics/src/index.ts"],
+      "@nx-starter/modules/fetcher": ["libs/modules/fetcher/src/index.ts"],
+      "@nx-starter/modules/media-queries": ["libs/modules/media-queries/src/index.ts"],
+      "@nx-starter/ui": ["libs/ui/src/index.ts"]
     },
     "strict": true,
     "allowJs": false,

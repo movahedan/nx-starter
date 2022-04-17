@@ -1,5 +1,5 @@
 {
-  "npmScope": "root",
+  "npmScope": "nx-starter",
   "defaultProject": "website",
   "affected": {
     "defaultBase": "main"
@@ -53,7 +53,7 @@
     },
     "@nrwl/next": {
       "application": {
-        "style": "@emotion/styled",
+        "style": "styled-components",
         "linter": "eslint"
       }
     }

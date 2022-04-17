@@ -8,14 +8,12 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/modules/media-queries/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/modules/media-queries"],
       "options": {
         "jestConfig": "libs/modules/media-queries/jest.config.ts",
         "passWithNoTests": true
@@ -23,9 +21,8 @@
     },
     "build": {
       "executor": "@nrwl/web:rollup",
-      "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/modules/media-queries",
+        "outputPath": "out/build/libs/modules/media-queries",
         "tsConfig": "libs/modules/media-queries/tsconfig.lib.json",
         "project": "libs/modules/media-queries/package.json",
         "entryFile": "libs/modules/media-queries/src/index.ts",

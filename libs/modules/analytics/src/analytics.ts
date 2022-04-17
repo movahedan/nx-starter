@@ -97,3 +97,11 @@ export const useAnalytics = <
 
   return containerRef;
 };
+
+export const analytics = <
+  AnalyticEventType = string,
+  AnalyticEventData = unknown
+>(
+  eventType: AnalyticEventType,
+  data: AnalyticEventData
+) => analyticEvent<AnalyticEventType, AnalyticEventData>(eventType, data);

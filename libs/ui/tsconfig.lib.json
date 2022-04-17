@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "exclude": ["**/*.test.ts", "**/*.test.tsx"],
+  "exclude": ["**/*.test.ts", "**/*.test.tsx", "jest.config.ts"],
   "include": ["**/*.ts", "**/*.tsx"],
   "files": [
     "../../node_modules/@nrwl/react/typings/cssmodule.d.ts",

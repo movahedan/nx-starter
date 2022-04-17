@@ -1,4 +1,4 @@
-import jestFetchMock from 'jest-fetch-mock';
+const jestFetchMock = require('jest-fetch-mock');
 
 jestFetchMock.enableMocks();
 

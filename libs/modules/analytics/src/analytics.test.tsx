@@ -1,55 +1,103 @@
 import { render } from '@testing-library/react';
 
-import { useAnalytics } from './analytics';
+import { analytics, useAnalytics } from './analytics';
 import {
   prepareDataLayer,
   getDataLayerSpy,
   expectDataLayer,
 } from './testing-utilities.test';
 
-jest.useFakeTimers();
+describe('Analytics', () => {
+  describe('useAnalytics', () => {
+    beforeAll(() => {
+      prepareDataLayer();
+    });
 
-describe('useAnalytics', () => {
-  const PageWithAnalyticTracker = () => {
-    useAnalytics(
-      () => ({
-        eventType: 'sample',
+    it('should fire analytics push event on page view', async () => {
+      const dataLayer = getDataLayerSpy();
+      render(<PageWithAnalyticTracker />);
+
+      expectDataLayer(dataLayer).toBePushedWith('sample', {
         data: {},
-      }),
-      []
-    );
+      });
+    });
 
-    return null;
-  };
+    it('should not fire analytics push event when ref is not attached', async () => {
+      jest.spyOn(console, 'error').mockImplementation(() => undefined);
+      expect(() => render(<AnalyticTrackingWrongAttachment />)).toThrowError(
+        '[useAnalytics]: containerRef is not attached to any element'
+      );
+    });
 
-  const AnalyticTrackingWrongAttachment = () => {
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    useAnalytics(() => () => {}, []);
+    it('should fire analytics push event when ref is attached', async () => {
+      const dataLayer = getDataLayerSpy();
+      const { getByRole } = render(<AnalyticTrackingCorrectAttachment />);
 
-    return (
-      <div>
-        <button data-testid='btn' />
-      </div>
-    );
-  };
+      getByRole('button').click();
 
-  beforeAll(() => {
-    prepareDataLayer();
-  });
-
-  it('should fire analytics push event on page view', async () => {
-    const dataLayer = getDataLayerSpy();
-    render(<PageWithAnalyticTracker />);
-
-    expectDataLayer(dataLayer).toBePushedWith('sample', {
-      data: {},
+      expectDataLayer(dataLayer).toBePushedWith('sample', {
+        data: { buttonClicked: true },
+      });
     });
   });
 
-  it('should not fire analytics push event when ref is not attached', async () => {
-    jest.spyOn(console, 'error').mockImplementation(() => undefined);
-    expect(() => render(<AnalyticTrackingWrongAttachment />)).toThrowError(
-      '[useAnalytics]: containerRef is not attached to any element'
-    );
+  describe('analytics', () => {
+    beforeAll(() => {
+      prepareDataLayer();
+    });
+
+    it('should fire analytics push event on page view', async () => {
+      const dataLayer = getDataLayerSpy();
+
+      analytics('sample', {});
+
+      expectDataLayer(dataLayer).toBePushedWith('sample', {
+        data: {},
+      });
+    });
   });
 });
+
+const PageWithAnalyticTracker = () => {
+  useAnalytics(
+    () => ({
+      eventType: 'sample',
+      data: {},
+    }),
+    []
+  );
+
+  return null;
+};
+
+const AnalyticTrackingWrongAttachment = () => {
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  useAnalytics(() => () => {}, []);
+
+  return (
+    <div>
+      <button data-testid='btn' />
+    </div>
+  );
+};
+
+const AnalyticTrackingCorrectAttachment = () => {
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  const ref = useAnalytics(
+    () => (ref, analytics) => {
+      ref.current
+        ?.getElementsByTagName('button')
+        .item(0)
+        ?.addEventListener('click', () => {
+          analytics('sample', { buttonClicked: true });
+        });
+    },
+    []
+  );
+
+  return (
+    <div ref={ref}>
+      <button data-testid='btn' />
+    </div>
+  );
+};

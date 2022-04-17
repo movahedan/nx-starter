@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "include": ["**/*.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["./jest.setup.ts", "**/*.test.ts", "**/*.test.tsx"],
+  "exclude": ["jest.config.ts", "**/*.test.ts", "**/*.test.tsx"],
   "files": [
     "../../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
     "../../../node_modules/@nrwl/react/typings/image.d.ts"

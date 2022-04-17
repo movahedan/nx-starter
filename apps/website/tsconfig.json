@@ -3,7 +3,6 @@
   "compilerOptions": {
     "lib": ["es2021", "dom"],
     "jsx": "preserve",
-    "jsxImportSource": "@emotion/react",
 
     "noEmit": true,
     "isolatedModules": true,

@@ -2,14 +2,17 @@ import type { Config } from '@jest/types';
 
 const config: Config.InitialOptions = {
   displayName: 'website',
-  preset: '../../jest.preset.js',
+  preset: '../../tools/jest/preset.js',
   transform: {
     '^(?!.*\\.(js|ts|tsx|css|json)$)': '@nrwl/react/plugins/jest',
     '^.+\\.tsx?$': ['babel-jest', { presets: ['@nrwl/next/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js'],
-  coverageDirectory: '../../coverage/apps/website',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  coverageDirectory: '../../out/coverage/apps/website',
+  setupFilesAfterEnv: [
+    '../../tools/jest/setups/dom.ts',
+    '../../tools/jest/setups/match-media.ts',
+  ],
 };
 
 export default config;

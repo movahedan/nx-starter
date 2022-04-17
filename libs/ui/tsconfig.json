@@ -1,9 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": ".",
-    "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react"
+    "jsx": "react-jsx"
   },
   "references": [
     { "path": "./tsconfig.lib.json" },

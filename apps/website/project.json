@@ -8,25 +8,22 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/website/**/*.{js,jsx,ts,tsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/website"],
       "options": {
         "jestConfig": "apps/website/jest.config.ts"
       }
     },
     "build": {
       "executor": "@nrwl/next:build",
-      "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
         "root": "apps/website",
-        "outputPath": "dist/apps/website"
+        "outputPath": "out/build/apps/website"
       },
       "configurations": {
         "production": {}

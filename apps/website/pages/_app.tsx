@@ -1,20 +1,32 @@
-import Head from 'next/head';
-
 import '../pages.styles/main.css';
 
-import { MediaQueriesProvider } from '@root/modules-media-queries';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+
+import { MediaQueriesProvider } from '@nx-starter/modules/media-queries';
 
 import type { AppProps } from 'next/app';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+`;
+
+const theme = {
+  colors: {
+    primary: '#0070f3',
+  },
+};
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <MediaQueriesProvider initialData={pageProps}>
-      <Head>
-        <title>Welcome to website!</title>
-      </Head>
-      <main className='app'>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
         <Component {...pageProps} />
-      </main>
+      </ThemeProvider>
     </MediaQueriesProvider>
   );
 };

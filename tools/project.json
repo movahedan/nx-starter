@@ -1,0 +1,14 @@
+{
+  "root": "libs/ui",
+  "sourceRoot": "libs/ui/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/ui/**/*.{js,jsx,ts,tsx}"]
+      }
+    }
+  }
+}

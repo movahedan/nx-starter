@@ -8,7 +8,7 @@ import { mockMatchMedia } from './media-query.mock.test';
 import type { ScreenNames } from './media-queries.types';
 import type { FC, ReactNode } from 'react';
 
-describe('media-queries context', () => {
+describe('media-queries.context', () => {
   describe('server side', () => {
     const { window } = global;
     beforeEach(() => {

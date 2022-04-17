@@ -1,7 +1,7 @@
 import {
   useMediaQueries,
   withMediaQueriesServerSideData,
-} from '@root/modules-media-queries';
+} from '@nx-starter/modules/media-queries';
 
 import type { GetServerSideProps, NextPage } from 'next';
 

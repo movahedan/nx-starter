@@ -6,7 +6,7 @@
   "supportFile": "./src/support/index.ts",
   "pluginsFile": false,
   "video": true,
-  "videosFolder": "../../dist/cypress/apps/website-e2e/videos",
-  "screenshotsFolder": "../../dist/cypress/apps/website-e2e/screenshots",
+  "videosFolder": "../../out/cypress/apps/website-e2e/videos",
+  "screenshotsFolder": "../../out/cypress/apps/website-e2e/screenshots",
   "chromeWebSecurity": false
 }

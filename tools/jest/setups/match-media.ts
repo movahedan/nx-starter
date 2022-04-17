@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
-/* eslint-disable import/no-unassigned-import */
-import '@testing-library/jest-dom';
-
 window.matchMedia =
   window.matchMedia ||
   function () {

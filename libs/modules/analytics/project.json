@@ -8,14 +8,12 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/modules/analytics/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/modules/analytics"],
       "options": {
         "jestConfig": "libs/modules/analytics/jest.config.ts",
         "passWithNoTests": true
@@ -23,9 +21,8 @@
     },
     "build": {
       "executor": "@nrwl/web:rollup",
-      "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/modules/analytics",
+        "outputPath": "out/build/libs/modules/analytics",
         "tsConfig": "libs/modules/analytics/tsconfig.lib.json",
         "project": "libs/modules/analytics/package.json",
         "entryFile": "libs/modules/analytics/src/index.ts",

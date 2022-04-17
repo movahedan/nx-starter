@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ui should match the snapshots 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bczRLJ dETfye"
+    data-testid="idid"
+  >
+    <h1>
+      Welcome to Ui!
+    </h1>
+  </div>
+</DocumentFragment>
+`;

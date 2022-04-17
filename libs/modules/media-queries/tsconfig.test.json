@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["jest.setup.ts", "index.d.ts", "**/*.test.ts", "**/*.test.tsx"],
+  "include": ["index.d.ts", "**/*.test.ts", "**/*.test.tsx"],
   "compilerOptions": {
     "types": ["node", "jest", "@testing-library/jest-dom"]
   }

@@ -1,0 +1,19 @@
+{
+  "extends": ["next", "next/core-web-vitals"],
+  "overrides": [
+    {
+      "files": ["*.{ts,tsx,js,jsx}"],
+      "rules": {
+        "jsx-a11y/anchor-is-valid": "off",
+        "@next/next/no-html-link-for-pages": ["error", "apps/website/pages"]
+      }
+    },
+    {
+      "files": ["./pages/**/*.{js,jsx,ts,tsx}"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ]
+}
+  

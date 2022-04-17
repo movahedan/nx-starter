@@ -1,19 +1,40 @@
 {
   "root": true,
   "plugins": ["@nrwl/nx"],
-  "extends": ["plugin:prettier/recommended", ".es.import.eslintrc.json"],
-  "ignorePatterns": ["**/*"],
+  "extends": ["plugin:prettier/recommended"],
+  "rules": {
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "jsxSingleQuote": true 
+    }]
+  },
   "overrides": [
     {
       "files": ["*.{html,css,scss,json,svg,js,jsx,ts,tsx}"],
       "rules": {
-        "prettier/prettier": ["error", { "singleQuote": true,
-          "jsxSingleQuote": true }]
+        "prettier/prettier": ["error", { "singleQuote": true, "jsxSingleQuote": true }]
       }
     },
     {
-      "files": ["*.test.{js,jsx,ts,tsx}", "jest.setup.{js,ts}"],
-      "env": { "jest": true }
+      "files": ["*.{js,jsx,ts,tsx}"],
+      "extends": [".es.import.eslintrc.json"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "allow": [],
+            "enforceBuildableLibDependency": true,
+            "depConstraints": [
+              { "sourceTag": "*", "onlyDependOnLibsWithTags": ["*"] }
+            ]
+          }
+        ],
+        "newline-before-return": "error",
+        "max-lines": [
+          "error",
+          { "max": 1000, "skipBlankLines": true, "skipComments": true }
+        ]
+      }
     },
     {
       "files": ["*.{js,jsx}"],
@@ -28,44 +49,23 @@
         "@typescript-eslint/no-var-requires": "error",
         "@typescript-eslint/ban-ts-comment": "warn",
         "@typescript-eslint/no-empty-function": "warn",
-        "@typescript-eslint/consistent-type-imports": [
-          "error",
-          { "prefer": "type-imports" }
-        ]
+        "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }]
       }
     },
     {
-      "files": ["*.{js,jsx,ts,tsx}"],
-      "rules": {
-        "@nrwl/nx/enforce-module-boundaries": [
-          "error",
-          {
-            "allow": [],
-            "enforceBuildableLibDependency": true,
-            "depConstraints": [
-              { "sourceTag": "*", "onlyDependOnLibsWithTags": ["*"] }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "files": ["*.{js,jsx,ts,tsx}"],
-      "rules": {
-        "newline-before-return": "error",
-        "max-lines": [
-          "error",
-          { "max": 1000, "skipBlankLines": true, "skipComments": true }
-        ]
-      }
-    },
-    {
-      "files": ["**/*.{test,spec}.{js,jsx,ts,tsx}"],
+      "files": ["*.test.{js,jsx,ts,tsx}", "jest.setup.ts"],
+      "env": { "jest": true },
       "rules": {
         "max-lines": [
           "error",
           { "max": 3000, "skipBlankLines": true, "skipComments": true }
         ]
+      }
+    },
+    {
+      "files": ["jest.setup.ts"],
+      "rules": {
+        "@typescript-eslint/no-empty-function": "off"
       }
     }
   ]
