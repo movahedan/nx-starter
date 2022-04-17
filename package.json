@@ -11,11 +11,7 @@
     ]
   },
   "scripts": {
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test",
-    "pre-commit": "lint-staged -r",
-    "uninstall": "rm -rf ./apps/*/node_modules && rm -rf ./libs/*/node_modules && rm -rf ./node_modules"
+    "pre-commit": "lint-staged -r"
   },
   "dependencies": {
     "@nrwl/next": "13.3.9",
