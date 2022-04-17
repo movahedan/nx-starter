@@ -1,0 +1,9 @@
+{
+    "name": "@nx-starter",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#90cdf4",
+    "orientation": "any",
+    "icons":[]
+  }
+  

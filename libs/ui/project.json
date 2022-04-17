@@ -39,6 +39,37 @@
           }
         ]
       }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "port": 6006,
+        "config": {
+          "configFolder": "libs/ui/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true,
+          "verbose": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "outputPath": "out/storybook/libs/ui",
+        "config": {
+          "configFolder": "libs/ui/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
     }
   }
 }

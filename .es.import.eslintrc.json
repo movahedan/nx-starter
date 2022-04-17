@@ -91,16 +91,19 @@
       }
     },
     {
-      "files": ["jest.config.ts"],
+      "files": ["jest.*.ts"],
       "rules": {
-        "import/no-default-export": "off"
+        "import/no-default-export": "off",
+        "import/no-unassigned-import": "off"
       }
     },
     {
-      "files": ["jest.setup.ts"],
-      "rules": {
-        "import/no-unassigned-import": "off"
-      }
-    }
+      "files": [
+				"*.stories.tsx"
+			],
+			"rules": {
+				"import/no-default-export": "off"
+			}
+		}
   ]
 }

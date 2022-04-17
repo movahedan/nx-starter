@@ -1,5 +1,20 @@
 {
   "name": "@nx-starter/ui",
   "private": false,
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "dependencies": {
+    "@nrwl/storybook": "^13.10.2",
+    "webpack": "^5.27.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^6.3.8",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-docs": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/core": "^6.4.22",
+    "@storybook/react": "^6.3.8",
+    "@storybook/theming": "^6.3.8"
+  }
 }
