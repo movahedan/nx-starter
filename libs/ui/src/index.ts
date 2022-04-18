@@ -1,2 +1,5 @@
-export * from './lib/ui';
+export * from './atoms';
+export * from './molecules';
+export * from './organisms';
+export * from './templates';
 export * from './utils';
