@@ -91,16 +91,14 @@
       }
     },
     {
-      "files": ["jest.*.ts"],
+      "files": ["tools/jest/setups/*.ts", "./jest.config.ts"],
       "rules": {
         "import/no-default-export": "off",
         "import/no-unassigned-import": "off"
       }
     },
     {
-      "files": [
-				"*.stories.tsx"
-			],
+      "files": ["*.stories.tsx"],
 			"rules": {
 				"import/no-default-export": "off"
 			}

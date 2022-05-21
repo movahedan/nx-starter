@@ -53,19 +53,15 @@
       }
     },
     {
-      "files": ["*.test.{js,jsx,ts,tsx}", "jest.setup.ts"],
+      "files": ["tools/jest/setups/*.ts", "*.test.{js,jsx,ts,tsx}"],
       "env": { "jest": true },
       "rules": {
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-var-requires": "off",
         "max-lines": [
           "error",
           { "max": 3000, "skipBlankLines": true, "skipComments": true }
         ]
-      }
-    },
-    {
-      "files": ["jest.setup.ts"],
-      "rules": {
-        "@typescript-eslint/no-empty-function": "off"
       }
     }
   ]
