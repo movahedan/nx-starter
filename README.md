@@ -1,94 +1,27 @@
+# @nx-starter: An opinionated NX boilerplate
 
+<p style="text-align: left;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
-# Aviro
+> This project was initially generated using [Nx](https://nx.dev). I changed it in a way to be minimal, scalable and maintainable.The general idea about the features and modules has been inspired by other boilerplate of mine [Next boilerplate](https://github.com/movahedan/next-boilerplate)
 
-This project was generated using [Nx](https://nx.dev).
+## Features
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+- [x] TS configs are configured in an opinionated style you may need in the project
+- [x] Clean output directory you can use with ease and confident
+- [x] Powerful scalable formatter, linter, husky, and lint-staged for commits 
+- [x] Yarn workspace to install rare packages like Cypress and Storybook only where they're needed
+- [x] Next.js application, with Dynamic layout supports
+- [x] Sample React UI library with styled-components, that supports Storybook and Unit testing
+- [x] Analytics module to be able to ease the analytics process and usages
+- [x] Fetcher module that is pure fetch that can be extends
+- [x] Media Queries feature to be able to make responsive pages in JavaScript
 
-🔎 **Smart, Fast and Extensible Build System**
+## TODO
 
-## Adding capabilities to your workspace
-
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
-
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
-
-Below are our core plugins:
-
-- [React](https://reactjs.org)
-  - `yarn add -D @nrwl/react`
-- Web (no framework frontends)
-  - `yarn add -D @nrwl/web`
-- [Angular](https://angular.io)
-  - `yarn add -D @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `yarn add -D @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `yarn add -D @nrwl/express`
-- [Node](https://nodejs.org)
-  - `yarn add -D @nrwl/node`
-
-There are also many [community plugins](https://nx.dev/community) you could add.
-
-## Generate an application
-
-Run `nx g @nrwl/react:app my-app` to generate an application.
-
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
-
-## Generate a library
-
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are shareable across libraries and applications. They can be imported from `@nx-starter/mylib`.
-
-## Development server
-
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-
-
-## ☁ Nx Cloud
-
-### Distributed Computation Caching & Distributed Task Execution
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+- [ ] Add a ReactNative application
+- [ ] Add a Nest.js application, or a pure express Back-End application
+- [ ] Add a data layer library to reuse in multiple Front-End applications
+- [ ] Take a look at GraphQL architecture to see if it fits or not
+- [ ] Publish some of the modules like Fetcher or Analytics
+- [ ] Add some generators since I changed the style of libs/apps
+- [ ] Add github actions for linting, creating artifacts, and publishing the project
