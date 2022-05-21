@@ -1,6 +1,6 @@
 import { create } from '@storybook/theming';
 
-const theme = create({
+export const theme = create({
   base: 'light',
 
   colorSecondary: '#e01a22',
@@ -9,5 +9,3 @@ const theme = create({
   brandUrl: 'https://www.google.com/',
   brandImage: 'https://www.google.com/logo.svg',
 });
-
-export default theme;

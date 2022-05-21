@@ -5,5 +5,5 @@
     "plugin:@nrwl/nx/react-typescript",
     "../../.es.react.eslintrc.json"
   ],
-  "ignorePatterns": ["!**/*"]
+  "ignorePatterns": ["!**/*", "node_modules"]
 }

@@ -9,11 +9,11 @@ module.exports = {
   coverageProvider: 'v8',
   coverageReporters: ['html', 'text', 'text-summary'],
   coverageThreshold: {
-		global: {
-			statement: 10,
-			branches: 10,
-			functions: 10,
-			lines: 10,
-		},
-	},
+    global: {
+      statement: 10,
+      branches: 10,
+      functions: 10,
+      lines: 10,
+    },
+  },
 };

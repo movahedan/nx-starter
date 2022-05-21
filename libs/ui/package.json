@@ -15,6 +15,8 @@
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/core": "^6.4.22",
     "@storybook/react": "^6.3.8",
-    "@storybook/theming": "^6.3.8"
+    "@storybook/theming": "^6.3.8",
+    "@types/jest-axe": "^3.5.3",
+    "jest-axe": "^6.0.0"
   }
 }

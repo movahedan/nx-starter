@@ -6,5 +6,8 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js'],
   coverageDirectory: '../../../out/coverage/libs/ui',
-  setupFilesAfterEnv: ['../../tools/jest/setups/dom.ts'],
+  setupFilesAfterEnv: [
+    '../../tools/jest/setups/dom.ts',
+    '../../tools/jest/setups/axe.ts',
+  ],
 };
