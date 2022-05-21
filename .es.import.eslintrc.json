@@ -93,6 +93,7 @@
     {
       "files": ["tools/jest/setups/*.ts", "./jest.config.ts"],
       "rules": {
+        "@typescript-eslint/no-var-requires": "off",
         "import/no-default-export": "off",
         "import/no-unassigned-import": "off"
       }
@@ -102,6 +103,12 @@
 			"rules": {
 				"import/no-default-export": "off"
 			}
-		}
+		},
+    {
+      "files": ["./commitlint.config.ts"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
   ]
 }

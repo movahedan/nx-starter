@@ -1,0 +1,6 @@
+#!/bin/sh
+# https://git-scm.com/docs/githooks#_post_checkout
+
+if ! test -f ".husky/_/husky.sh"; then
+    yarn husky install;
+fi
