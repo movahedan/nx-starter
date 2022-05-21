@@ -6,22 +6,33 @@
 
 ## Features
 
-- [x] TS configs are configured in an opinionated style you may need in the project
-- [x] Clean output directory you can use with ease and confident
-- [x] Powerful scalable formatter, linter, husky, and lint-staged for commits 
-- [x] Yarn workspace to install rare packages like Cypress and Storybook only where they're needed
-- [x] Next.js application, with Dynamic layout supports
+- [x] Powered by NX and Yarn workspaces, built for React projects
+- [x] Fully TypeScript with production-ready and strict configurations
+- [x] Scalable Jest configuration with Fetch, DOM, Match Media, and Accessibility setups
+- [x] Powerful eslint integrated with Prettier, TypeScript, Jest, Imports, React, and A11Y configurations
+- [x] Strong husky with lint-staged, commitlint, commitizen, and branchlint integrations
+- [x] Organized output directory that represents build, coverage, storybook, and tsc
+- [ ] Conventional release, auto generate-able changelog via Trunked based development for monorepos
+
+## Modules
+
+- [x] Fetcher module on top of fetch, with default configuration and custom event handlers
+- [x] Analytics module implementation with react hooks, independent DOM event tracking, and simple tracking
+- [x] Media Queries module for making responsive pages in JavaScript with supports for SSR
 - [x] Sample React UI library with styled-components, that supports Storybook and Unit testing
-- [x] Analytics module to be able to ease the analytics process and usages
-- [x] Fetcher module that is pure fetch that can be extends
-- [x] Media Queries feature to be able to make responsive pages in JavaScript
+- [ ] SWR data layer with generated functions via Orval
+
+## Applications
+
+- [x] Next.js application
+- [x] Create react application
+- [ ] Add a ReactNative application
+- [ ] Add a Nest.js application, or a pure express Back-End application
 
 ## TODO
 
-- [ ] Add a ReactNative application
-- [ ] Add a Nest.js application, or a pure express Back-End application
-- [ ] Add a data layer library to reuse in multiple Front-End applications
+- [ ] Git rebase, Git squash and Merge process
+- [ ] GitFlow! Github actions for linting, creating artifacts, and publishing the project
 - [ ] Take a look at GraphQL architecture to see if it fits or not
 - [ ] Publish some of the modules like Fetcher or Analytics
 - [ ] Add some generators since I changed the style of libs/apps
-- [ ] Add github actions for linting, creating artifacts, and publishing the project
