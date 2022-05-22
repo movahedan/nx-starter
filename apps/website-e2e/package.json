@@ -1,5 +1,5 @@
 {
-  "name": "website-e2e",
+  "name": "@nx-starter/website-e2e",
   "version": "1.0.0",
   "dependencies": {
     "cypress": "^9.1.0"
