@@ -1,0 +1,31 @@
+name: Pull Request Actions
+
+on: [ pull_request ]
+
+jobs:
+  pr-release:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "👋 A ${{ github.event_name }} event running on a ${{ runner.os }} server."
+      - run: echo "🔎 The name of branch is ${{ github.ref }} and repository is ${{ github.repository }}."
+
+      - name: Check out repository code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: nrwl/nx-set-shas@v2
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.2.0'
+
+      - run: echo "📦 Installing packages" && yarn install --frozen-lockfile 2> >(grep -v warning 1>&2)
+      - run: echo "🖥️ Linting" && yarn nx affected:lint
+      - run: echo "🖥️ Building" && yarn nx affected:build
+      - run: echo "🖥️ Unit testing" && yarn nx affected:test --ci --code-coverage
+      - run: echo "🖥️ E2E testing" && yarn nx affected:e2e
+      - run: echo "🖥️ Type checking" && yarn nx affected --target=type-check
+
+      - run: echo "✅ Congratulations!"
