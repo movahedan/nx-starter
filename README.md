@@ -1,6 +1,9 @@
 # @nx-starter: An opinionated NX boilerplate
 
-<p style="text-align: left;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+![LICENSE](https://img.shields.io/github/license/movahedan/nx-starter?style=flat-square)
+![Top language](https://img.shields.io/github/languages/top/movahedan/nx-starter?style=flat-square)
+![Downloads](https://img.shields.io/github/downloads/movahedan/nx-starter/total?style=flat-square)
+![Pull requests](https://img.shields.io/github/issues-pr/movahedan/nx-starter?style=flat-square)
 
 > This project was initially generated using [Nx](https://nx.dev). I changed it in a way to be minimal, scalable and maintainable.The general idea about the features and modules has been inspired by other boilerplate of mine [Next boilerplate](https://github.com/movahedan/next-boilerplate)
 
