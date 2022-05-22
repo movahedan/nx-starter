@@ -2,6 +2,7 @@
   "root": "libs/modules/media-queries",
   "sourceRoot": "libs/modules/media-queries/src",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "type-check": {
       "executor": "./tools/executors/type-check:type-check"
