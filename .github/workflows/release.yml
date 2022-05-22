@@ -25,9 +25,9 @@ jobs:
 
       - run: echo "📦 Installing packages" && yarn install --frozen-lockfile
       - run: echo "🖥️ Linting" && yarn nx affected:lint
-      - run: echo "🖥️ Type checking" && yarn nx affected:type-check
+      - run: echo "🖥️ Type checking" && yarn nx affected --target=type-check
       - run: echo "🖥️ Building" && yarn nx affected:build
-      - run: echo "🖥️ Unit testing" && yarn nx affected:test
+      - run: echo "🖥️ Unit testing" && yarn nx affected:test --ci --code-coverage
       - run: echo "🖥️ E2E testing" && yarn nx affected:e2e
 
       - run: echo "✅ Congratulations!"
