@@ -6,7 +6,8 @@
           "docs",
           "enhance",
           "refactor",
-          "revert"
+          "revert",
+          "ci"
       ],
       "banned": ["wip"],
       "skip": ["skip-ci"],
