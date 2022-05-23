@@ -1,0 +1,44 @@
+{
+  "root": "libs/hooks",
+  "sourceRoot": "libs/hooks/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "type-check": {
+      "executor": "./tools/executors/type-check:type-check"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/hooks/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/hooks/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "options": {
+        "outputPath": "out/build/libs/hooks",
+        "tsConfig": "libs/hooks/tsconfig.lib.json",
+        "project": "libs/hooks/package.json",
+        "entryFile": "libs/hooks/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "format": ["esm"],
+        "assets": [
+          {
+            "glob": "libs/hooks/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}

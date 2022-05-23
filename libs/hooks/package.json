@@ -1,0 +1,8 @@
+{
+  "name": "@nx-starter/hooks",
+  "private": false,
+  "version": "0.0.1",
+  "dependencies": {
+    "react": "17.0.2"
+  }
+}
