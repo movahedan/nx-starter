@@ -6,6 +6,7 @@
     "analytics": "libs/modules/analytics",
     "fetcher": "libs/modules/fetcher",
     "media-queries": "libs/modules/media-queries",
-    "ui": "libs/ui"
+    "ui": "libs/ui",
+    "hooks": "libs/hooks"
   }
 }

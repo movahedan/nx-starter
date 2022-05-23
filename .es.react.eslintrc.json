@@ -9,7 +9,7 @@
     "react-hooks/exhaustive-deps": [
       "error",
       {
-        "additionalHooks": "(useState|useEffect)"
+        "additionalHooks": "(useElementSize|useIntersect|useMouseEffect|useResizeEffect|useScrollEffect|useThrottleCallback|useThrottleEffect)"
       }
     ]
   }

@@ -6,8 +6,7 @@
   "private": true,
   "workspaces": [
     "apps/*",
-    "libs/*",
-    "libs/modules/analytics"
+    "libs/*"
   ],
   "scripts": {
     "commit": "git-cz"
