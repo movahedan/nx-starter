@@ -25,10 +25,10 @@ jobs:
           node-version: '16.2.0'
 
       - run: echo "📦 Installing packages" && yarn install --frozen-lockfile
-      - run: echo "🖥️ Linting" && yarn nx run-many --all --target=lint --color
-      - run: echo "🖥️ Type checking" && yarn nx run-many --all --target=type-check --color
-      - run: echo "🖥️ Building" && yarn nx run-many --all --target=build --color
-      - run: echo "🖥️ Unit testing" && yarn nx run-many --all --target=test --ci --code-coverage --color
-      - run: echo "🖥️ E2E testing" && yarn nx run-many --all --target=e2e --color
+      - run: echo "🖥️ Linting" && yarn nx run-many --all --target=lint
+      - run: echo "🖥️ Type checking" && yarn nx run-many --all --target=type-check
+      - run: echo "🖥️ Building" && yarn nx run-many --all --target=build
+      - run: echo "🖥️ Unit testing" && yarn nx run-many --all --target=test --ci --code-coverage
+      - run: echo "🖥️ E2E testing" && yarn nx run-many --all --target=e2e
 
       - run: echo "✅ Congratulations!"
