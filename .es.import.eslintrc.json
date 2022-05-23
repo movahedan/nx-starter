@@ -85,6 +85,15 @@
       }
     },
     {
+      "files": ["src/index.ts"],
+      "rules": {
+        "import/max-dependencies": [
+          "off",
+          { "max": 100, "ignoreTypeImports": true }
+        ]
+      }
+    },
+    {
       "files": ["*.d.ts"],
       "rules": {
         "import/no-unassigned-import": "off"
