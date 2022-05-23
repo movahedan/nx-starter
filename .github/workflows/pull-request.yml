@@ -3,7 +3,7 @@ name: Pull Request Actions
 on: [ pull_request ]
 
 jobs:
-  pr-release:
+  pull-request:
     runs-on: ubuntu-latest
     steps:
       - run: echo "👋 A ${{ github.event_name }} event running on a ${{ runner.os }} server."
@@ -22,10 +22,10 @@ jobs:
           node-version: '16.2.0'
 
       - run: echo "📦 Installing packages" && yarn install --frozen-lockfile 2> >(grep -v warning 1>&2)
-      - run: echo "🖥️ Linting" && yarn nx affected:lint
-      - run: echo "🖥️ Type checking" && yarn nx affected --target=type-check
-      - run: echo "🖥️ Building" && yarn nx affected:build
-      - run: echo "🖥️ Unit testing" && yarn nx affected:test --ci --code-coverage
-      - run: echo "🖥️ E2E testing" && yarn nx affected:e2e
+      - run: echo "🖥️ Linting" && yarn nx affected:lint --color
+      - run: echo "🖥️ Type checking" && yarn nx affected --target=type-check --color
+      - run: echo "🖥️ Building" && yarn nx affected:build --color
+      - run: echo "🖥️ Unit testing" && yarn nx affected:test --ci --code-coverage --color
+      - run: echo "🖥️ E2E testing" && yarn nx affected:e2e --color
 
       - run: echo "✅ Congratulations!"
