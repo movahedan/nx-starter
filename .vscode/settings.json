@@ -8,6 +8,9 @@
     "branchlint",
     "commitlint",
     "conventionalcommits",
+    "KHTML",
+    "Mobi",
+    "msgseparator",
     "nrwl"
   ]
 }
