@@ -1,0 +1,43 @@
+{
+  "root": "libs/utilities-next",
+  "sourceRoot": "libs/utilities-next",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "type-check": {
+      "executor": "./tools/executors/type-check:type-check"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/utilities-next/**/*.{js,jsx,ts,tsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/utilities-next/jest.config.ts"
+      }
+    },
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "options": {
+        "outputPath": "out/build/libs/utilities-next",
+        "tsConfig": "libs/utilities-next/tsconfig.lib.json",
+        "project": "libs/utilities-next/package.json",
+        "entryFile": "libs/utilities-next/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "format": ["esm"],
+        "assets": [
+          {
+            "glob": "libs/utilities-next/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}

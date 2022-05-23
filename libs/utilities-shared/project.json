@@ -1,0 +1,43 @@
+{
+  "root": "libs/utilities-shared",
+  "sourceRoot": "libs/utilities-shared/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "type-check": {
+      "executor": "./tools/executors/type-check:type-check"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/utilities-shared/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/utilities-shared/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "options": {
+        "outputPath": "out/build/libs/utilities-shared",
+        "tsConfig": "libs/utilities-shared/tsconfig.lib.json",
+        "project": "libs/utilities-shared/package.json",
+        "entryFile": "libs/utilities-shared/src/index.ts",
+        "external": [],
+        "compiler": "babel",
+        "format": ["esm"],
+        "assets": [
+          {
+            "glob": "libs/utilities-shared/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}

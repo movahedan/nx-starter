@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "../../.eslintrc.json",
+    "plugin:@nrwl/nx/react-typescript",
+    "../../.es.react.eslintrc.json",
+    "../../.es.next.eslintrc.json"
+  ],
+  "ignorePatterns": ["!**/*", "node_modules"]
+}

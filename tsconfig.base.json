@@ -13,10 +13,13 @@
     "types": [],
     "baseUrl": ".",
     "paths": {
+      "@nx-starter/ui": ["libs/ui/src/index.ts"],
       "@nx-starter/modules/analytics": ["libs/modules/analytics/src/index.ts"],
       "@nx-starter/modules/fetcher": ["libs/modules/fetcher/src/index.ts"],
       "@nx-starter/modules/media-queries": ["libs/modules/media-queries/src/index.ts"],
-      "@nx-starter/ui": ["libs/ui/src/index.ts"]
+      "@nx-starter/utilities-shared": ["libs/utilities-shared/src/index.ts"],
+      "@nx-starter/utilities-react": ["libs/utilities-react/src/index.ts"],
+      "@nx-starter/utilities-next": ["libs/utilities-next/src/index.ts"]
     },
     "strict": true,
     "allowJs": false,

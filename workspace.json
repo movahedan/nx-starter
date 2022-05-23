@@ -3,10 +3,13 @@
   "projects": {
     "website": "apps/website",
     "website-e2e": "apps/website-e2e",
-    "analytics": "libs/modules/analytics",
-    "fetcher": "libs/modules/fetcher",
-    "media-queries": "libs/modules/media-queries",
     "ui": "libs/ui",
-    "hooks": "libs/hooks"
+    "hooks": "libs/hooks",
+    "modules-analytics": "libs/modules/analytics",
+    "modules-fetcher": "libs/modules/fetcher",
+    "modules-media-queries": "libs/modules/media-queries",
+    "utilities-shared": "libs/utilities-shared",
+    "utilities-react": "libs/utilities-react",
+    "utilities-next": "libs/utilities-next"
   }
 }
