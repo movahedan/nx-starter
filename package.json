@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "name": "nx-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "soheil.movahhedan@gmail.com",
   "private": true,
   "workspaces": [
