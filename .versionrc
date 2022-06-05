@@ -1,0 +1,22 @@
+{
+    "path": ".",
+    "tag-prefix": "root-v",
+    "releaseCommitMessageFormat": "chore(release): @nx-starter/root@{{currentTag}}",
+    "parserOpts": {
+        "headerCorrespondence": [
+          "type",
+          "scope",
+          "subject",
+          "body"
+        ]
+    },
+    "types": [
+        {"type": "feat", "section": "Features"},
+        {"type": "fix", "section": "Bug fixes"},
+        {"type": "style", "section": "Styling"},
+        {"type": "test", "section": "Testing changes"},
+        {"type": "refactor", "section": "Refactoring changes"},
+        {"type": "chore", "section": "Development changes"},
+        {"type": "docs", "section": "Documentations"}
+    ]
+}
