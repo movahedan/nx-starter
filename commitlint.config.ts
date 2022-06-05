@@ -7,10 +7,9 @@ const workspace = readWorkspaceJson();
 const scopes: PromptConfig['questions']['scope'] = {
   description: 'What is the scope of this change (e.g. component or file name)',
   enum: Object.fromEntries(
-    Object.entries({ root: {}, ...workspace.projects }).map(([name]) => [
-      name,
-      {},
-    ])
+    Object.entries({ root: {}, release: {}, ...workspace.projects }).map(
+      ([name]) => [name, {}]
+    )
   ),
 };
 
