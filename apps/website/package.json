@@ -2,6 +2,9 @@
   "name": "@nx-starter/website",
   "private": false,
   "version": "0.0.1",
+  "scripts": {
+    "release": "standard-version"
+  },
   "dependencies": {
     "next": "12.1.5",
     "react": "17.0.2",

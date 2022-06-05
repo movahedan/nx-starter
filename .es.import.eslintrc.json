@@ -114,7 +114,7 @@
 			}
 		},
     {
-      "files": ["./commitlint.config.ts"],
+      "files": ["./commitlint.config.ts", "./changelog.config.ts"],
       "rules": {
         "import/no-default-export": "off"
       }
