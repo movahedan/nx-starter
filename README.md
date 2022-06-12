@@ -13,7 +13,7 @@
 - [x] Powerful eslint integrated with Prettier, TypeScript, Jest, Imports, React, and A11Y configurations
 - [x] Strong husky with lint-staged, commitlint, commitizen, and branchlint integrations
 - [x] Organized output directory that represents build, coverage, storybook, and tsc
-- [ ] Conventional release, auto generate-able changelog via Trunked based development for monorepos
+- [x] Conventional release, auto generate-able changelog via Trunked based development for monorepos
 
 ## Modules
 
