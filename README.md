@@ -39,6 +39,3 @@
 - [ ] Add some generators since I changed the style of libs/apps
 
 > The general idea about the features and modules has been inspired by other boilerplate of mine [Next boilerplate](https://github.com/movahedan/next-boilerplate)
-
-
-yarn 2> >(grep -v warning 1>&2)
